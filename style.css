@@ -1,0 +1,82 @@
+.wrap {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.title {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+#btn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px 32px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#btn:hover, .btn:focus {
+  background-color: #2980B9;
+}
+
+#btn:disabled {
+  opacity: 0.5;
+}
+
+#wrapListItems {
+  width: 500px;
+  border-radius: 8px;
+  background-color: #ccc;
+}
+
+#wrapListItems > .listItems {
+  padding: 10px 10px 20px ;
+}
+
+.listItems {
+  list-style: none;
+  cursor: pointer;
+}
+
+.node {
+  position: relative;
+}
+
+.node:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17px;
+  left: 8px;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid #555;
+  border-top: 1px solid #555;
+  transform: rotate(45deg);
+  transition: 0.1s;
+}
+
+.show.node:before{
+  top: 15px;
+  transform: rotate(135deg);
+}
+
+.node > .listItems {
+  display: none;
+}
+
+.node.show > .listItems {
+  display: block;
+}
+
+.item {
+  padding: 10px 20px;
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
